@@ -1,8 +1,8 @@
-## CUSTOM DROPDOWN
+## CUSTOM SELECT
 
 ## Le challenge
 
-Mon objectif ici était de construire un custom dropdown. Pour se faire :
+Mon objectif ici était de construire un custom select. Pour se faire :
 
 - Récupération des données de l'API Restcountries
 - Création de manière dynamique des différents options

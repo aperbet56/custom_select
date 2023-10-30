@@ -13,7 +13,7 @@ Mon objectif ici était de construire un custom dropdown. Pour se faire :
 
 ## Démonstration
 
-Lien vers le projet :
+Lien vers le projet : https://aperbet56.github.io/custom_select/
 
 ## Développez avec
 

@@ -1,0 +1,166 @@
+/**** Reset ****/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/**** Variables CSS ****/
+:root {
+    --primary: #ff7518;
+    --secondary: #f9d8d0; 
+    --border: #f3f3f3;
+    --white: #ffffff;
+    --black: #06033c;
+    --container: 112rem;
+    --transition: all 0.5s ease-in-out;
+  }
+
+/**** Style général de la page ****/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    background: var(--primary);
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+
+.main__content {
+    max-width: var(--container);
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.select {
+    width: 30rem;
+    background: var(--secondary);
+    color: var(--black);
+    padding: 2rem;
+    border-radius: 0.7rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.select i {
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.select.selected i {
+    transform: rotate(180deg);
+}
+
+.select.selected {
+    position: relative;
+}
+
+.select.selected::after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    right: 1.5rem;
+    border-left: 1rem solid transparent;
+    border-top: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid var(--secondary);
+    animation: feadIn 1s ease-in-out backwards;
+}
+
+/**** Animation feadIn ****/
+@keyframes feadIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.select__dropdown {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: 30rem;
+    background: var(--secondary);
+    color: var(--black);
+    border-radius: 0.4rem;
+    transition: var(--transition);
+    overflow-y: auto;
+}
+
+.select__dropdown::-webkit-scrollbar {
+    width: 0;
+}
+
+.select__dropdown.active {
+    margin: 2rem 0;
+    max-height: 32.5rem;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: var(--transition);
+}
+
+.option {
+    padding: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    gap: 4rem;
+}
+
+.option:not(:last-child) {
+    border-bottom: 0.15rem solid var(--border);
+}
+
+.option:hover {
+    background: var(--white);
+    transition: var(--transition);
+}
+
+.option img {
+    width: 3rem;
+    height: auto;
+}
+
+footer span {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}

@@ -6,6 +6,8 @@ Mon objectif ici était de construire un custom dropdown. Pour se faire :
 
 - Récupération des données de l'API Restcountries
 - Création de manière dynamique des différents options
+- Au clic sur la flèche, les options apparaissent.
+- Si l'internaute clique de nouveau sur la flèche, les différentes options disparaissent
 - Affichage des options de manière alphabétique
 - Surbrillance des options au survol
 

@@ -45,7 +45,7 @@ const displayCustomSelect = (countriesList) => {
     let option = document.createElement("li");
     option.className = "option";
     option.setAttribute("value", country.name.common);
-    option.innerHTML = `<img src="${country.flags.svg}" alt="${country.name.common}" /> <span>${country.name.common}</span>`;
+    option.innerHTML = `<img src="${country.flags.svg}" alt="${country.flags.alt}" /> <span>${country.name.common}</span>`;
     selectDropdown.appendChild(option);
   });
 
